@@ -52,8 +52,10 @@ Contact  →  Form submission feedback
   ↓
 Footer
 
-![Wireframes]
-(docs/Desktop Wireframe.drawio)
-(docs/mobile layout - small screen.drawio)
-(docs/tablet_layout-medium_screen layout.drawio)
+### Wireframes 
+
+[Desktop Wireframe - draw.io file](docs/Desktop_Wireframe.drawio)  
+[Tablet Wireframe - draw.io file](docs/Tablet_Wireframe.drawio)  
+[Mobile Wireframe - draw.io file](docs/Mobile_Wireframe.drawio)
+
 
