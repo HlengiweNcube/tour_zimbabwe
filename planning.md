@@ -39,3 +39,15 @@ Practice accessible design (semantic HTML, ARIA labels, alt text, skip-link).
 | Gallery | Image carousel showing scenic photos | Gallery |
 | Contact | Inquiry form validated with JavaScript | Contact |
 | Footer | Copyright & social links | — |
+
+## E. Sitemap and Flow
+
+Home
+  ↓
+Destinations  →  Filter (Nature / Historical / City)
+  ↓
+Gallery  →  Interactive image slider (Next / Prev buttons)
+  ↓
+Contact  →  Form submission feedback
+  ↓
+Footer
