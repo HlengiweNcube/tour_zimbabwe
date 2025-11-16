@@ -1,5 +1,5 @@
 # 1. Project Conceptualization and Planning
-🟩 A. Project Concept / Theme
+## A. Project Concept / Theme
 
 ## Title: Tour Zimbabwe
 Theme: A single-page interactive travel website promoting Zimbabwe’s major tourist attractions.
