@@ -54,8 +54,9 @@ Footer
 
 ### Wireframes 
 
-[Desktop Wireframe - draw.io file](docs/Desktop_Wireframe.png)  
-[Tablet Wireframe - draw.io file](docs/Tablet_Wireframe.png)  
-[Mobile Wireframe - draw.io file](docs/Mobile_Wireframe.png)
+[Desktop Wireframe ](docs/Desktop_Wireframe.png)  
+[Tablet Wireframee](docs/Tablet_Wireframe.png)  
+[Mobile Wireframe](docs/Mobile_Wireframe.png)
+
 
 
