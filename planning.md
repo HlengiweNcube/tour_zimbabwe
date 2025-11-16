@@ -51,3 +51,9 @@ Gallery  →  Interactive image slider (Next / Prev buttons)
 Contact  →  Form submission feedback
   ↓
 Footer
+
+![Wireframes]
+(docs/Desktop Wireframe.drawio)
+(docs/mobile layout - small screen.drawio)
+(docs/tablet_layout-medium_screen layout.drawio)
+
