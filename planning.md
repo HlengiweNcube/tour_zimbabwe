@@ -52,6 +52,31 @@ Contact  →  Form submission feedback
   ↓
 Footer
 
+## F. Planned Interactivity (JavaScript)
+
+| Feature | Description | Type |
+|----------|--------------|------|
+| Form Validation | Ensures user inputs are complete and email is valid before submission. | Form Processing |
+| Destination Filter | Filter cards by category (Nature, Historical, City) using button clicks. | DOM Manipulation |
+| Gallery Slider | Next/Previous buttons change the displayed image dynamically. | DOM Manipulation |
+| Theme Toggle | Switches between light and dark modes for accessibility and style preference. | DOM Manipulation |
+
+### Gallery Slider Details
+- Implemented using JavaScript to change the image source dynamically.  
+- Uses Next/Previous buttons to navigate through an array of images.  
+- Demonstrates DOM manipulation and event handling.
+
+## G. Next Steps
+1. Finalize wireframes and confirm layout structure.  
+2. Build semantic HTML structure for all sections.  
+3. Apply responsive CSS using Grid and Flexbox.  
+4. Implement JavaScript interactivity features.  
+5. Validate HTML and CSS.  
+6. Host project on GitHub Pages and test responsiveness.  
+7. Prepare final documentation for submission.
+
+
+
 ### Wireframes 
 
 [Desktop Wireframe ](docs/Desktop_Wireframe.png)  
