@@ -212,3 +212,13 @@ button#submitBtn:hover {
   text-align: center;
 }
 
+/* ================= FOOTER ================= */
+footer {
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 0.9em;
+}
+
