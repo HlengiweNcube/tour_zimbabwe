@@ -36,3 +36,61 @@ nav a {
   cursor: pointer;
   margin-top: 1em;
 }
+
+/* ================= DESTINATIONS SECTION ================= */
+#destinations {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 1.5em;
+}
+
+.filter-btn {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #228B22;
+}
+
+/* Cards Layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.5em 0;
+}
+
+.card p {
+  padding: 0 1em 1em;
+  color: #555;
+}
