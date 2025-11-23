@@ -63,3 +63,7 @@ form.addEventListener("submit", e => {
     form.reset();
   }
 });
+// ================= HERO BUTTON SCROLL =================
+document.getElementById("exploreBtn").addEventListener("click", () => {
+  document.getElementById("destinations").scrollIntoView({ behavior: "smooth" });
+});
