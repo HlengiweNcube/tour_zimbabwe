@@ -1,4 +1,5 @@
 /* --- Header & Nav --- */
+
 header {
   background-color: #006400;
   color: white;
@@ -7,6 +8,36 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  margin-top: 0; /* prevents gap */
+  padding-top: 6em; /* ensures hero content starts below header */
+}
+
+
+/* ================= ACCESSIBILITY ================= */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  ;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
 
 nav ul {
   list-style: none;
