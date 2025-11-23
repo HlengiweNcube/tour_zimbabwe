@@ -14,3 +14,29 @@ filterButtons.forEach(btn => {
   });
 });
 // ================= EXPLORE BUTTON =================
+// ================= GALLERY SLIDER =================
+const galleryImages = [
+  "images/victoriafalls.jpg",
+  "images/greatzimbabwe.jpg",
+  "images/hwange.jpg",
+  "images/bulawayo.jpg"
+];
+
+let currentImage = 0;
+const galleryImg = document.getElementById("galleryImage");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+function updateGallery() {
+  galleryImg.src = galleryImages[currentImage];
+}
+
+nextBtn.addEventListener("click", () => {
+  currentImage = (currentImage + 1) % galleryImages.length;
+  updateGallery();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentImage = (currentImage - 1 + galleryImages.length) % galleryImages.length;
+  updateGallery();
+});
