@@ -54,9 +54,9 @@ form.addEventListener("submit", e => {
   if (!name || !email || !message) {
     feedback.textContent = "⚠️ Please complete all fields.";
     feedback.style.color = "red";
-  } else if (!email.includes("@") || !email.includes(".")) {
-    feedback.textContent = "❌ Please enter a valid email address.";
-    feedback.style.color = "red";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  feedback.textContent = "❌ Please enter a valid email address (e.g., name@example.com).";
+  feedback.style.color = "red";
   } else {
     feedback.textContent = "✅ Thank you! Your message has been sent.";
     feedback.style.color = "green";
