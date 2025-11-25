@@ -411,6 +411,35 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.hero {
+  position: relative;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6em 1em;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero h2,
+.hero p,
+.hero button {
+  position: relative;
+  z-index: 1;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #ffcc00;
+  margin-top: 1em;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
 
 
 
