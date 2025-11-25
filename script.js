@@ -92,4 +92,34 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// ================= SINGLE CARD VIEW =================
+const allCards = document.querySelectorAll(".card");
+const showAllBtn = document.getElementById("showAllBtn");
+
+allCards.forEach(card => {
+  card.addEventListener("click", () => {
+    // Hide all other cards
+    allCards.forEach(c => {
+      if (c !== card) {
+        c.style.display = "none";
+      }
+    });
+    // Show this one larger
+    card.classList.add("focused");
+    // Show the "Show All" button
+    showAllBtn.style.display = "inline-block";
+  });
+});
+
+showAllBtn.addEventListener("click", () => {
+  // Show all cards again
+  allCards.forEach(c => {
+    c.style.display = "block";
+    c.classList.remove("focused");
+  });
+  // Hide the "Show All" button
+  showAllBtn.style.display = "none";
+});
+
+
 
