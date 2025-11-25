@@ -67,3 +67,29 @@ form.addEventListener("submit", e => {
 document.getElementById("exploreBtn").addEventListener("click", () => {
   document.getElementById("destinations").scrollIntoView({ behavior: "smooth" });
 });
+
+// ================= HERO BUTTON SCROLL =================
+const exploreBtn = document.getElementById("exploreBtn");
+
+exploreBtn.addEventListener("click", () => {
+  document.getElementById("destinations").scrollIntoView({ behavior: "smooth" });
+});
+
+// ================= BACK TO TOP BUTTON =================
+const backToTopBtn = document.getElementById("backToTop");
+
+// Show button when scrolled down 300px
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+// Smooth scroll back to top when clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+

@@ -345,5 +345,33 @@ button {
 button:hover {
   background-color: #228B22;
 }
+#exploreBtn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* ================= BACK TO TOP BUTTON ================= */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 200;
+}
+
+#backToTop:hover {
+  background-color: #228B22;
+  transform: scale(1.1);
+}
 
 
