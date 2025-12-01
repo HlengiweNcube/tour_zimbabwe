@@ -121,5 +121,66 @@ showAllBtn.addEventListener("click", () => {
   showAllBtn.style.display = "none";
 });
 
+// ================= GREETING BASED ON TIME =================
+const greetingText = document.getElementById("greeting");
+const hours = new Date().getHours();
+let greeting;
+
+if (hours < 12) greeting = "Good morning!";
+else if (hours < 18) greeting = "Good afternoon!";
+else greeting = "Good evening!";
+
+greetingText.textContent = `${greeting} Welcome to Tour Zimbabwe!`;
+
+// ================= SIMPLE GRAPHICS: DRAW BAR =================
+const canvas = document.getElementById("ratingChart");
+const ctx = canvas.getContext("2d");
+
+// Draw colored bars to represent satisfaction
+ctx.fillStyle = "#006400";
+ctx.fillRect(0, 20, 300, 40); // main bar
+ctx.fillStyle = "#ffcc00";
+ctx.fillRect(0, 20, 240, 40); // partial fill (e.g. 80%)
+ctx.fillStyle = "#333";
+ctx.font = "16px Arial";
+ctx.fillText("Visitor Satisfaction: 80%", 10, 50);
 
 
+// ================= OBJECTS EXAMPLE =================
+const destination = {
+  name: "Victoria Falls",
+  location: "Zambezi River",
+  type: "Nature",
+  rating: 5,
+  description: "One of the Seven Natural Wonders of the World."
+};
+
+console.log(`${destination.name} is a ${destination.type} attraction in Zimbabwe.`);
+
+// ================= OOP EXAMPLE =================
+class Destination {
+  constructor(name, category, location) {
+    this.name = name;
+    this.category = category;
+    this.location = location;
+  }
+  describe() {
+    return `${this.name} is a ${this.category} site located in ${this.location}.`;
+  }
+}
+
+const vicFalls = new Destination("Victoria Falls", "Nature", "Zambezi River");
+console.log(vicFalls.describe());
+
+class City extends Destination {
+  constructor(name, population) {
+    super(name, "City", "Zimbabwe");
+    this.population = population;
+  }
+  describeCity() {
+    return `${this.name} has a population of ${this.population} and offers cultural landmarks.`;
+  }
+}
+
+const bulawayo = new City("Bulawayo", "1.2 million");
+console.log(bulawayo.describeCity());
