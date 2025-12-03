@@ -705,6 +705,29 @@ section {
     font-size: 1.8rem;
   }
 }
+.transition-title {
+  text-align: center;
+  color: #006400;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  animation: slideDown 1s ease-out;
+}
 
+.transition-title {
+  text-align: center;
+  color: #006400;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  animation: slideDown 1s ease-out;
+}
 
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
