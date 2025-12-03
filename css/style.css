@@ -127,12 +127,44 @@ p {
 .card:hover {
   transform: scale(1.03);
 }
-
+/* === DESTINATION CARD IMAGES === */
 .card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px;              /* fixed height for consistency */
+  object-fit: cover;          /* crops instead of squishing */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Add a slight hover zoom */
+.card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card container styling */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Ensure all cards align neatly */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
 
 .card h3 {
   margin: 0.5em 0;
@@ -155,11 +187,31 @@ p {
   color: #006400;
 }
 
+/* === SLIDER IMAGE STYLING === */
 .slider {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1em;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+  background: #000; /* optional, helps unify different photo edges */
+  padding: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+#galleryImage {
+  width: 100%;
+  max-width: 800px;      /* limits size on wide screens */
+  height: 400px;         /* consistent height */
+  object-fit: cover;     /* crop nicely */
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+#galleryImage:hover {
+  transform: scale(1.03);
 }
 
 .slider img {
@@ -169,21 +221,41 @@ p {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
+/* Navigation buttons */
 .gallery-btn {
-  background-color: #006400;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  font-size: 1.5em;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  font-size: 2rem;
+  padding: 0.5em 0.8em;
   cursor: pointer;
+  border-radius: 50%;
   transition: background 0.3s;
 }
 
 .gallery-btn:hover {
-  background-color: #228B22;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+  #galleryImage {
+    height: 250px;
+    max-width: 100%;
+  }
+}
+
+/* === GALLERY GRID === */
+.gallery-grid img {
+  width: 90%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
 }
 
 .caption {
@@ -198,6 +270,13 @@ p {
     width: 90%;
   }
 }
+
+@media (max-width: 600px) {
+  .card img {
+    height: 150px;
+  }
+}
+
 
 /* ================= CONTACT SECTION ================= */
 #contact {
@@ -534,5 +613,98 @@ section {
   margin-top: 1em;
   font-style: italic;
 }
+/* === POPUP GALLERY STYLING === */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Center popup content */
+.popup-content {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Main popup image */
+#popupImage {
+  width: 100%;
+  height: 500px;          /* fixed consistent height */
+  object-fit: cover;      /* ensures it fills area evenly */
+  border-radius: 10px;
+  background: #000;
+  transition: transform 0.3s ease-in-out;
+}
+
+#popupImage:hover {
+  transform: scale(1.02);
+}
+
+/* Navigation buttons */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.gallery-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Button positions */
+#prevPhoto {
+  left: 15px;
+}
+#nextPhoto {
+  right: 15px;
+}
+#closePopup {
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Caption text */
+#popupCaption {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 0.5em;
+}
+
+/* Responsive for phones */
+@media (max-width: 700px) {
+  #popupImage {
+    height: 250px;
+  }
+  .gallery-btn {
+    font-size: 1.8rem;
+  }
+}
+
 
 
