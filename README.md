@@ -51,6 +51,8 @@ JavaScript:
     Input validation for form submission.
     Smooth scroll and back-to-top behaviors.
 
+    Experimented with various interactive features — initially tested a modal popup for the gallery, later refined it to use DOM-based dynamic image swaps for smoother transitions. Implemented scrollIntoView() for navigation flow and a back-to-top button for accessibility.
+
 ## Responsive Wireframes
 
 Wireframes for three screen sizes:
