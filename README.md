@@ -17,8 +17,8 @@ Host the finished project on GitHub Pages for accessibility and evaluation.
 ## Project Links 
 | Resource                        | Link                                                                                                 |
 | ------------------------------- | --------------------------------------------------------------------------------------------------   |
-| **GitHub Repository**           | [https://github.com/<HlengiweNcube>/tour_zimbabwe](https://github.com/<HlengiweNcube>/tour_zimbabwe) |
-| **Live Website (GitHub Pages)** | [https://<HlengiweNcube.github.io/tour_zimbabwe/](https://<HlengiweNcube>.github.io/tour_zimbabwe/)  |
+| **GitHub Repository**           | [https://github.com/<HlengiweNcube>/tour_zimbabwe](https://github.com/HlengiweNcube/tour_zimbabwe) |
+| **Live Website (GitHub Pages)** | [https://<HlengiweNcube.github.io/tour_zimbabwe/](https://HlengiweNcube.github.io/tour_zimbabwe/)  |
 
 
 ## Project Concept 
@@ -63,3 +63,26 @@ Stored in
         [Desktop Wireframe ](docs/Desktop_Wireframe.png)  
         [Tablet Wireframee](docs/Tablet_Wireframe.png)  
         [Mobile Wireframe](docs/Mobile_Wireframe.png)
+
+## Image Sources
+Wikimedia Commons (Public Domain)
+    greatzimbabwe.jpg 
+    harare.jpg 
+    Bulawayo.jpg
+    Bulawayocityhall.jpg
+    victoriafalls.jpg
+    hwange.jpg
+    lion.jpg
+www.alamy.com
+  complexruins.jpg
+  greatwalks.jpg
+  greatzimbabwe.jpg
+  greatzimruins.jpg
+www.gettyimages.ie
+  lakekariba.jpg
+  rainbowabovefalls.jpg
+  sunsentoverzambezi.jpg
+  
+
+
+
