@@ -172,15 +172,68 @@ class Destination {
 const vicFalls = new Destination("Victoria Falls", "Nature", "Zambezi River");
 console.log(vicFalls.describe());
 
-class City extends Destination {
-  constructor(name, population) {
-    super(name, "City", "Zimbabwe");
-    this.population = population;
-  }
-  describeCity() {
-    return `${this.name} has a population of ${this.population} and offers cultural landmarks.`;
-  }
+// ================= DESTINATION POPUP GALLERY =================
+const destinationGalleries = {
+  victoriafalls: [
+    { src: "images/victoriafallsmoke.jpg", caption: "Victoria Falls – The Smoke that Thunders" },
+    { src: "images/sunsetoverzambezi.jpg", caption: "Sunset over the Zambezi River" },
+    { src: "images/rainbowabovefalls.jpg", caption: "Rainbows above Victoria Falls" }
+  ],
+  greatzimbabwe: [
+    { src: "images/greatzimruins.jpg", caption: "Great Zimbabwe Ruins" },
+    { src: "images/greatwalls.jpg", caption: "The Great Enclosure wall" },
+    { src: "images/complexruins.jpg", caption: "Hill Complex ancient ruins" }
+  ],
+  bulawayo: [
+    { src: "images/bulawayocityhall.jpg", caption: "City of Bulawayo" },
+    { src: "images/matopohills.jpg", caption: "Matobo Hills near Bulawayo" },
+    { src: "images/bulawayorailwaymuseum.jpg", caption: "Bulawayo Railway Museum" }
+  ]
+  };
+
+const destinationCards = document.querySelectorAll(".card");
+const popup = document.getElementById("destinationPopup");
+const popupImg = document.getElementById("popupImage");
+const popupCaption = document.getElementById("popupCaption");
+const prevPhoto = document.getElementById("prevPhoto");
+const nextPhoto = document.getElementById("nextPhoto");
+const closePopup = document.getElementById("closePopup");
+
+let currentDestination = [];
+let currentIndex = 0;
+
+// Show popup with slideshow for selected destination
+destinationCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const location = card.dataset.location;
+    if (destinationGalleries[location]) {
+      currentDestination = destinationGalleries[location];
+      currentIndex = 0;
+      showPopupImage();
+      popup.style.display = "flex";
+    }
+  });
+});
+
+function showPopupImage() {
+  const { src, caption } = currentDestination[currentIndex];
+  popupImg.src = src;
+  popupCaption.textContent = caption;
 }
 
-const bulawayo = new City("Bulawayo", "1.2 million");
-console.log(bulawayo.describeCity());
+// Navigation
+nextPhoto.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % currentDestination.length;
+  showPopupImage();
+});
+
+prevPhoto.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + currentDestination.length) % currentDestination.length;
+  showPopupImage();
+});
+
+// Close popup
+closePopup.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
