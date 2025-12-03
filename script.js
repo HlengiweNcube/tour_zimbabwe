@@ -55,8 +55,8 @@ form.addEventListener("submit", e => {
     feedback.textContent = "⚠️ Please complete all fields.";
     feedback.style.color = "red";
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-  feedback.textContent = "❌ Please enter a valid email address (e.g., name@example.com).";
-  feedback.style.color = "red";
+    feedback.textContent = "❌ Please enter a valid email address (e.g., name@example.com).";
+    feedback.style.color = "red";
   } else {
     feedback.textContent = "✅ Thank you! Your message has been sent.";
     feedback.style.color = "green";
@@ -189,7 +189,7 @@ const destinationGalleries = {
     { src: "images/matopohills.jpg", caption: "Matobo Hills near Bulawayo" },
     { src: "images/bulawayorailwaymuseum.jpg", caption: "Bulawayo Railway Museum" }
   ]
-  };
+};
 
 const destinationCards = document.querySelectorAll(".card");
 const popup = document.getElementById("destinationPopup");
