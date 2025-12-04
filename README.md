@@ -84,7 +84,7 @@ Stored in:
 |------|-------------|
 | **HTML Validation** | ![HTML Validation](docs/html_validation.png) |
 | **CSS Validation** | ![CSS Validation](docs/css_validation.png) |
-| **JavaScript Validation (JSHint)** | ![JS Validation](docs/js_validation.png) |
+| **JavaScript Validation (JSHint)** | ![JS Validation](docs/validate_javascript.png) |
 
 ## Image Sources & Copyright
 
